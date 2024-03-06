@@ -1,4 +1,4 @@
-// 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
+
 async function downloadSpeech(model,voice,input) {
     const apiKey = localStorage.getItem('OPENAI_API_KEY');
     const response = await fetch('https://api.openai.com/v1/audio/speech', {
