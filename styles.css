@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background:black;
+    font-family: system-ui;
+}
+#slider-container {
+    display: flex;
+    align-items: center;
+}
+#speedSlider {
+    flex: 1;
+}
+#speedValue {
+    width: 30px;
+    text-align: center;
+}
+p.usuario {
+    background: #f6f6f6;
+    margin: 0;
+    line-height: 1;
+    padding: 20px;
+}
+p.asistente {
+    background: #ebebeb;
+    margin: 0;
+    line-height: 1;
+    padding: 20px;
+}
+audio#speechAudio {
+    width: 100%;
+    background: #f1f3f4;
+}
+div#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+audio#speechAudio {
+    display: none;
+}
+div#item2 {
+    display: none;
+}
+div#buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: fixed;
+    bottom: 50px;
+    place-content: center;
+    width: 100vw;
+}
+button#startButton,
+button#stopButton,
+button#openModal {
+    background: black;
+    border: none;
+    height:100px;
+    width:100px;
+}
+div#buttons img {
+    width:50px;
+}
+/* Estilo del modal */
+/* Estilo del contenido del modal con animación */
+.modal {
+    display:none;
+}
+.modal-content {
+    position:fixed;
+    height: 200px;
+    background: white;
+    bottom: 0;
+    width:100%;
+    display: grid;
+    place-content: center;
+
+}
+span.close {
+    position: absolute;
+    right: 0;
+    background: red;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-content: center;
+}

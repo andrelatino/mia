@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    
+    
+    
+    
+    
+    <div id="grid"></div>
+        <div id="item1">
+            <div id="container"></div>
+            <div id="buttons">
+                <button id="startButton"><img src="./mic-on.svg" width="100" height="100"></button>
+                <button id="stopButton"><img src="./mic-off.svg" width="100" height="100"></button>
+                <button id="openModal"><img src="./settings.svg" width="100" height="100"></button>
+            </div>
+            
+            <audio id="speechAudio" controls autoplay></audio>
+
+            <!-- <div id="slider-container">
+                <input type="range" id="speedSlider" min="0" max="2" step="0.01" value="1" />
+                <div id="speedValue">1</div>
+            </div>
+            <audio id="audio" controls crossorigin></audio>
+            <label>Upload audio file
+            <input id="upload" type="file" accept="audio/*">
+            </label>
+            <button id="live">Play live stream</button>
+            <div class="info"><a href="https://audiomotion.dev">audioMotion-analyzer</a> <span id="version"></span></div> -->
+        </div>
+        <div id="item2">
+            <p id="result"></p>
+            <div id="conversaciones"></div>
+        </div>
+        
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <input type="text" id="textInput" placeholder="OPENAI API KEY">
+              <button id="sendButton">SAVE</button>
+            </div>
+          </div>
+
+    <!-- <script>
+        const audio = document.getElementById("speechAudio");
+        const speedSlider = document.getElementById("speedSlider");
+        const speedValue = document.getElementById("speedValue");
+        
+        speedSlider.addEventListener("input", () => {
+            audio.playbackRate = speedSlider.value;
+            speedValue.innerText = speedSlider.value;
+        });
+    </script> -->
+    <script type="module" src="./audimotion.js"></script>
+    <script src="speak.js"></script>
+    <script src="askMia.js"></script>
+</body>
+</html>
