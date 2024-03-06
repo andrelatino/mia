@@ -56,7 +56,7 @@ actualizarConversaciones();
 const url = 'https://api.openai.com/v1/chat/completions';
 
 function iniciarConversacionGPT(mensajeUsuario) {
-    const apiKey = localStorage.getItem('OPENAI_API_KEY');
+    var apiKeyForChat = document.getElementById("textInput").value;
     stopRecognition();
     const query = {
         model: "gpt-3.5-turbo-0125",
@@ -70,7 +70,7 @@ function iniciarConversacionGPT(mensajeUsuario) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
+            'Authorization': `Bearer ${apiKeyForChat}`
         },
         body: JSON.stringify(query)
     })

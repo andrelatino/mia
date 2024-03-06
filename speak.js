@@ -1,11 +1,13 @@
+var apiKeyForVoice = document.getElementById("textInput").value;
+
 
 async function downloadSpeech(model,voice,input) {
-    const apiKey = localStorage.getItem('OPENAI_API_KEY');
+    
     const response = await fetch('https://api.openai.com/v1/audio/speech', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
+            'Authorization': `Bearer ${apiKeyForVoice}`
         },
         body: JSON.stringify({
             model: model,
